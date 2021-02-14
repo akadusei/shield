@@ -12,7 +12,6 @@ describe Shield::Api::Users::Delete do
     client.api_auth(email, password)
 
     response = client.exec(Api::Users::Delete.with(user_id: user.id))
-
     response.should send_json(200, {status: "success"})
   end
 
@@ -21,7 +20,6 @@ describe Shield::Api::Users::Delete do
     UserOptionsFactory.create &.user_id(user.id)
 
     response = ApiClient.exec(Api::Users::Delete.with(user_id: user.id))
-
     response.should send_json(401, logged_in: false)
   end
 end

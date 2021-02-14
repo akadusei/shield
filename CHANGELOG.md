@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Add support for *Lucky* v0.26.
 - Add user option to send notification emails for new bearer logins.
 - Add array support for enum adapters created with `.__enum` macro.
+- Add `Shield::ConfirmDelete` operation mixin.
 
 ### Changed
 - Require email columns to be case-insensitive.
